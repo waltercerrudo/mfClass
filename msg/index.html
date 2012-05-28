@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SexyAlertBox - www.coders.me</title>
+<link rel="stylesheet" href="global.css" type="text/css" media="all" />
+
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="sexyalertbox.v1.2.jquery.js"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="sexyalertbox.css" />
+
+<script type="text/javascript">
+function test() {
+    Sexy.prompt('<h1>Registro de usuarios</h1>Ingresa tu nombre para poder identificarte en el sistema.','Eduardo' ,{ onComplete: 
+      function(returnvalue) {
+        if(returnvalue)
+        {
+          Sexy.confirm('<h1>Bienvenido '+returnvalue+',</h1><p>¿Deseas ver el about us?</p><p>Pulsa "Ok" para continuar, o pulsa "Cancelar" para salir.</p>', { onComplete: 
+            function(returnvalue) {
+              if(returnvalue)
+              {
+                Sexy.info('<h1>SexyAlertBox</h1><em>version 1.2</em><br/><p>&copy;2008-2009 Todos los derechos reservados.</p><p>Sexy Alert Box esta basado en PBBAcpBox.</p><p>Visita <a href="http://www.coders.me/">www.coders.me</a> para obtener la ultima version de este script.</p>');
+              }
+              else
+              {
+                Sexy.alert('<h1>SexyAlertBox</h1><em>version 1.2</em><br/><p>No te olvides de visitar <a href="http://www.coders.me/">www.coders.me</a> esta lleno de articulos de programacion.</p>');
+              }
+            }
+          });
+        }
+        else
+        {
+          Sexy.error('<h1>Error al intentar entrar al sistema</h1><p>Para continuar, debes ingresar un nombre en la casilla de Nombre.</p><p>Intentalo de nuevo.</p>');
+        }
+      }
+    });
+}
+</script>
+
+</head>
+
+<body>
+	<div id="top">
+		<div id="header">
+
+			<div id="login-form" style="text-align: right;">
+				<a
+					href="http://www.coders.me/web-html-js-css/javascript/sexy-alert-box-12-mootools-jquery">Volver
+					al Blog</a>
+			</div>
+
+			<h1>
+				Sexy <span>Alert Box 1.2</span>
+			</h1>
+		</div>
+
+		<div class="message">
+			<p>Alertas mas sexys!</p>
+		</div>
+
+		<script type="text/javascript"><!--
+        google_ad_client = "pub-6896919298908258";
+        /* 728x90, creado 27/08/08 */
+        google_ad_slot = "4399429285";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+
+		<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+
+		<div class="hastoc">
+
+			<p>
+				Sexy Alert Box es un clon "sexy" del clasico <strong>alert</strong>
+				de javascript. Con un aire a lightbox, cambia las feas alertas de
+				windows por alertas mas atractivas!.
+			</p>
+
+			<h2 id="images">
+				<span><a href="#top">Subir</a></span>Ejemplos
+			</h2>
+			<div>
+				<h3>Diferentes estilos</h3>
+
+				<pre>
+&lt;p&gt;&lt;a href=&quot;#&quot; onclick=&quot;Sexy.alert('&lt;h1&gt;SexyAlertBox&lt;/h1&gt;&lt;em&gt;version 1.1&lt;/em&gt;&lt;br/&gt;&lt;p&gt;No te olvides de visitar &lt;a href=\'http://www.coders.me/\'&gt;www.coders.me&lt;/a&gt; esta lleno de articulos de programacion.&lt;/p&gt;');return false;&quot;&gt;Mostrar alerta&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; onclick=&quot;Sexy.info('&lt;h1&gt;SexyAlertBox&lt;/h1&gt;&lt;em&gt;version 1.1&lt;/em&gt;&lt;br/&gt;&lt;p&gt;&amp;copy;2008-2009 Todos los derechos reservados.&lt;/p&gt;&lt;p&gt;Sexy Alert Box esta basado en PBBAcpBox.&lt;/p&gt;&lt;p&gt;Visita &lt;a href=\'http://www.coders.me/\'&gt;www.coders.me&lt;/a&gt; para obtener la ultima version de este script.&lt;/p&gt;');return false;&quot;&gt;Acerca de...&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; onclick=&quot;Sexy.error('&lt;h1&gt;Error al intentar entrar al sistema&lt;/h1&gt;&lt;p&gt;Intentalo de nuevo.&lt;/p&gt;');return false;&quot;&gt;Mostrar error&lt;/a&gt;&lt;/p&gt;
+
+</pre>
+
+				<h3>Alertas usando eventos</h3>
+				<p>
+					<a href="#" onclick="test();return false;">Click Here</a>
+				</p>
+				<pre>
+function test() {
+  Sexy.prompt('&lt;h1&gt;Registro de usuarios&lt;/h1&gt;Ingresa tu nombre para poder identificarte en el sistema.','Eduardo' ,{ onComplete: 
+    function(returnvalue) {
+      if(returnvalue)
+      {
+        Sexy.confirm('&lt;h1&gt;Bienvenido '+returnvalue+',&lt;/h1&gt;&lt;p&gt;¿Deseas ver el about us?&lt;/p&gt;&lt;p&gt;Pulsa &quot;Ok&quot; para continuar, o pulsa &quot;Cancelar&quot; para salir.&lt;/p&gt;', {onComplete: 
+          function(returnvalue) { 
+            if(returnvalue)
+            {
+              Sexy.info('&lt;h1&gt;SexyAlertBox&lt;/h1&gt;&lt;em&gt;version 1.2&lt;/em&gt;&lt;br/&gt;&lt;p&gt;&amp;copy;2008-2009 Todos los derechos reservados.&lt;/p&gt;&lt;p&gt;Sexy Alert Box esta basado en PBBAcpBox.&lt;/p&gt;&lt;p&gt;Visita &lt;a href=&quot;http://www.coders.me/&quot;&gt;www.coders.me&lt;/a&gt; para obtener la ultima version de este script.&lt;/p&gt;');
+            }
+            else
+            {
+            Sexy.alert('&lt;h1&gt;SexyAlertBox&lt;/h1&gt;&lt;em&gt;version 1.2&lt;/em&gt;&lt;br/&gt;&lt;p&gt;No te olvides de visitar &lt;a href=&quot;http://www.coders.me/&quot;&gt;www.coders.me&lt;/a&gt; esta lleno de articulos de programacion.&lt;/p&gt;');
+            }
+          }
+        });
+      }
+      else
+      {
+        Sexy.error('&lt;h1&gt;Error al intentar entrar al sistema&lt;/h1&gt;&lt;p&gt;Para continuar, debes ingresar un nombre en la casilla de Nombre.&lt;/p&gt;&lt;p&gt;Intentalo de nuevo.&lt;/p&gt;');
+      }
+    }
+  });
+}
+
+&lt;a href=&quot;#&quot; <b>onclick</b>=&quot;test();return false;&quot;&gt;Click Here&lt;/a&gt;
+
+</pre>
+
+			</div>
+
+			<h2 id="license">
+				<span><a href="#top">Subir</a></span>Licencia MIT
+			</h2>
+			<div>
+				<p>Copyright (c) 2008 www.coders.me (Eduardo D. Sada)</p>
+
+				<p>Permission is hereby granted, free of charge, to any person
+					obtaining a copy of this software and associated documentation
+					files (the "Software"), to deal in the Software without
+					restriction, including without limitation the rights to use, copy,
+					modify, merge, publish, distribute, sublicense, and/or sell copies
+					of the Software, and to permit persons to whom the Software is
+					furnished to do so, subject to the following conditions:</p>
+
+				<p>The above copyright notice and this permission notice shall
+					be included in all copies or substantial portions of the Software.</p>
+
+				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+					KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+					WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+					NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+					BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+					ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+					CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+					SOFTWARE.</p>
+			</div>
+			<h2 id="download">
+				<span><a href="#top">Subir</a></span>Descargar
+			</h2>
+			<div>
+				<p>
+					Puedes descargar Sexy Alert Box desde el blog <a
+						href="http://www.coders.me/web-html-js-css/javascript/sexy-alert-box-12-mootools-jquery">www.coders.me</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+	<script type="text/javascript">
+  var pageTracker = _gat._getTracker("UA-2851998-1");
+  pageTracker._trackPageview();
+  </script>
+
+</body>
+</html>
