@@ -140,7 +140,7 @@ function getFoldersTree($n, TFolderMF $currFolder, $ParentFolderInd)
 }
     
     $us = new TUsuarioMF('mfapiclass@gmail.com', 'probando'); //Instancia Usuario
-    $mf = new TMediafire($us); //Instancia MediaFire
+    $mf = new TMediafire($us,'json','2.3','4458','7nxabmt58ztmd0lw8y0fr7xelvqh3adkwhlub0hx'); //Instancia MediaFire
     $mf->getUserInfo();
     $mf->myFiles();
     getFoldersTree(-1, $mf->myFiles->_rootFolder, 0);
